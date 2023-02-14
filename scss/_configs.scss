@@ -1,0 +1,63 @@
+$light-gray: #ddf0ff;
+$lightest-green: #68edb6;
+$light-blue: #1095ff;
+$blue: #0780e0;
+$lighter-green: #00bc6e;
+$dark-green: #019558;
+$hot-pink: #ff4cf5;
+$light-green: #009f7b;
+$orange: #ffc31b;
+$lighter-blue: #4c8aff;
+$dark-gray: #515151;
+$white: #fff;
+$black: #000;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+h4{
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+p{
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0 0 1em;
+}
+
+@mixin circularIcon($clr) {
+  color: $clr;
+  border: 1px solid $clr;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 1em;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: transform 0.7s ease-in-out;
+}
+
+

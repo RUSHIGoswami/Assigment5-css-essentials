@@ -1,0 +1,281 @@
+@import "_configs.scss";
+
+// Navbar
+nav {
+  background-color: $black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1em 10em;
+
+  // Logo
+  .logo {
+    color: $white;
+    font-size: 1.5em;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+
+  // List of hyper links
+  ul {
+    // Using flex so that nav link can be in row.
+    display: flex;
+
+    li {
+      margin: 0 5px;
+      a {
+        padding: 12px;
+        border-radius: 5px;
+        color: $white;
+      }
+
+      // Hover effect using pseudo selector.
+      a:hover {
+        background-color: $white;
+        transition: all 1s ease-in-out;
+        color: $black;
+      }
+    }
+  }
+
+  // Responsive bars for navbar
+  .bars {
+    display: none;
+    color: $white;
+    font-size: 1.2em;
+    width: 1.5em;
+    border: 1px solid $white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+// Hero section
+
+.hero-container {
+
+  // Displaying flex so I can move image.
+  .hero-1 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 2em 10em;
+    overflow: auto;
+    background-color: $light-gray;
+
+    // Nested image 
+    img {
+      width: 20em;
+      height: 20em;
+      margin-left: 1em;
+      cursor: pointer;
+    }
+
+    // Image hover effect.
+    img:hover {
+      box-shadow: 3px 3px 10px 2px $dark-gray;
+      transition: all 1s ease;
+    }
+
+    // Button
+    button {
+      color: $white;
+      background-color: $light-blue;
+      padding: 10px 1.5em 10px 13px;
+      border: 0;
+      border-radius: 5px;
+
+      // For double arrows
+      i {
+        visibility: hidden;
+        font-size: 1.1em;
+        transform: translateX(-30%);
+      }
+    }
+
+    // Button hover effect.
+    button:hover {
+      background-color: $blue;
+      i {
+        visibility: visible;
+        // Using translate function for moving effect.
+        transform: translateX(10%);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+
+  // Second hero section.
+  .hero-2 {
+    // Using extend partial of scss for inheriting the first hero section.
+    // Here I have to write only those properties which are changing all other will be applied automatically.
+    @extend .hero-1;
+    background-color: $lightest-green;
+    img {
+      float: left;
+      margin-left: 0;
+      margin-right: 1em;
+    }
+    button {
+      background-color: $lighter-green;
+    }
+    button:hover {
+      background-color: $dark-green;
+    }
+  }
+}
+
+
+// Cards section.
+.cards {
+  // Using flexbox to align them properly.
+  display: flex;
+  flex-direction: row;
+  margin: 3em 10em;
+
+  // Using one class I am giving same styles to all cards.
+  .card {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    height: 15em;
+    width: 13em;
+    box-shadow: 0 0 0.5px 0.5px gray;
+    border-radius: 10px;
+    margin: 1em 1.3em;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+
+    // Using transition for smooth animation.
+    transition: transform 0.7s ease-in-out;
+
+    p {
+      margin: 0;
+    }
+
+    // Here I have used mixin of scss to give different color different cards.
+    .fa-music {
+      @include circularIcon($hot-pink);
+    }
+    .fa-camera {
+      @include circularIcon($orange);
+    }
+    .fa-download {
+      @include circularIcon($light-green);
+    }
+    .fa-wifi {
+      @include circularIcon($lighter-blue);
+      padding: 1.1em 1em;
+    }
+    .fa-location-dot {
+      @include circularIcon($dark-gray);
+      padding: 1em 1.1em;
+    }
+  }
+
+
+  // Here I have to give hover effect separately to every cards because I am not using JavaScript. 
+
+  // music card hover effect.
+  .card-music:hover {
+    color: $white;
+    background-color: $hot-pink;
+    box-shadow: none;
+    transform: scale(1.2);
+
+    .fa-music {
+      background-color: $white;
+      transform: rotate(360deg);
+    }
+  }
+
+  // Download card hover effect.
+  .card-download:hover {
+    color: $white;
+    background-color: $light-green;
+    box-shadow: none;
+    transform: scale(1.2);
+
+    .fa-download {
+      background-color: $white;
+      transform: rotate(360deg);
+    }
+  }
+
+  // Camera card hover effect.
+  .card-camera:hover {
+    color: $white;
+    background-color: $orange;
+    box-shadow: none;
+    transform: scale(1.2);
+
+    .fa-camera {
+      background-color: $white;
+      transform: rotate(360deg);
+    }
+  }
+
+  // Wifi card hover effect.
+  .card-wifi:hover {
+    color: $white;
+    background-color: $light-blue;
+    box-shadow: none;
+    transform: scale(1.2);
+
+    .fa-wifi {
+      background-color: $white;
+      transform: rotate(360deg);
+    }
+  }
+
+  // Location card hover effect.
+  .card-location:hover {
+    color: $white;
+    background-color: $dark-gray;
+    box-shadow: none;
+    transform: scale(1.1);
+
+    .fa-location-dot {
+      background-color: $white;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+// Styles for footer.
+footer {
+  // Using flexbox to align properly in columns.
+  display: flex;
+  color: #ccc;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: flex-start;
+  padding: 2em 15em 2em 5em;
+  background-color: $dark-gray;
+
+  h4,
+  .col-1 {
+    color: $white;
+  }
+  ul {
+    li {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      cursor: pointer;
+    }
+
+    // Footer items hover effect.
+    li:hover {
+      color: $white;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+// I kept responsive stylesheet 
+@import "_responsive.scss";

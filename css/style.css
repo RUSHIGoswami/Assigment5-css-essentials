@@ -35,12 +35,16 @@ p {
   margin: 0 0 1em;
 }
 
+/* Navbar */
 nav {
   background-color: #000;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 1em 10em;
+  /* Logo */
+  /* List of hyper links */
+  /* Responsive bars for navbar */
 }
 nav .logo {
   color: #fff;
@@ -49,10 +53,12 @@ nav .logo {
   cursor: pointer;
 }
 nav ul {
+  /* Using flex so that nav link can be in row. */
   display: flex;
 }
 nav ul li {
   margin: 0 5px;
+  /* Hover effect using pseudo selector. */
 }
 nav ul li a {
   padding: 12px;
@@ -75,6 +81,11 @@ nav .bars {
   cursor: pointer;
 }
 
+/* Hero section */
+.hero-container {
+  /* Displaying flex so I can move image. */
+  /* Second hero section. */
+}
 .hero-container .hero-1, .hero-container .hero-2 {
   display: flex;
   width: 100%;
@@ -82,6 +93,10 @@ nav .bars {
   padding: 2em 10em;
   overflow: auto;
   background-color: #ddf0ff;
+  /* Nested image  */
+  /* Image hover effect. */
+  /* Button */
+  /* Button hover effect. */
 }
 .hero-container .hero-1 img, .hero-container .hero-2 img {
   width: 20em;
@@ -99,6 +114,7 @@ nav .bars {
   padding: 10px 1.5em 10px 13px;
   border: 0;
   border-radius: 5px;
+  /* For double arrows */
 }
 .hero-container .hero-1 button i, .hero-container .hero-2 button i {
   visibility: hidden;
@@ -110,10 +126,13 @@ nav .bars {
 }
 .hero-container .hero-1 button:hover i, .hero-container .hero-2 button:hover i {
   visibility: visible;
+  /* Using translate function for moving effect. */
   transform: translateX(10%);
   transition: all 0.5s ease;
 }
 .hero-container .hero-2 {
+  /* Using extend partial of scss for inheriting the first hero section.*/
+  /* Here I have to write only those properties which are changing all other will be applied automatically. */
   background-color: #68edb6;
 }
 .hero-container .hero-2 img {
@@ -128,10 +147,19 @@ nav .bars {
   background-color: #019558;
 }
 
+/* Cards section. */
 .cards {
+  /* Using flexbox to align them properly. */
   display: flex;
   flex-direction: row;
   margin: 3em 10em;
+  /* Using one class I am giving same styles to all cards. */
+  /* Here I have to give hover effect separately to every cards because I am not using JavaScript.  */
+  /* music card hover effect. */
+  /* Download card hover effect. */
+  /* Camera card hover effect. */
+  /* Wifi card hover effect. */
+  /* Location card hover effect. */
 }
 .cards .card {
   display: flex;
@@ -145,7 +173,9 @@ nav .bars {
   padding: 1em;
   text-align: center;
   cursor: pointer;
+  /* Using transition for smooth animation. */
   transition: transform 0.7s ease-in-out;
+  /* Here I have used mixin of scss to give different color different cards. */
 }
 .cards .card p {
   margin: 0;
@@ -253,7 +283,9 @@ nav .bars {
   transform: rotate(360deg);
 }
 
+/* Styles for footer. */
 footer {
+  /* Using flexbox to align properly in columns. */
   display: flex;
   color: #ccc;
   align-items: flex-start;
@@ -261,10 +293,15 @@ footer {
   align-content: flex-start;
   padding: 2em 15em 2em 5em;
   background-color: #515151;
+  /* Headings of footer. */
+  /* Styles for unordered list of footer. */
 }
 footer h4,
 footer .col-1 {
   color: #fff;
+}
+footer ul {
+  /* Footer items hover effect. */
 }
 footer ul li {
   font-size: 15px;
@@ -277,7 +314,8 @@ footer ul li:hover {
   transition: all 0.4s ease-in-out;
 }
 
-/* Landscape */
+/* I kept responsive stylesheet separately for ease. */
+/* Tablet Landscape */
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   nav {
     padding: 1em 4em;
@@ -302,6 +340,7 @@ footer ul li:hover {
     padding-right: 8em;
   }
 }
+/* Tablet potrait mode */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   nav {
     padding: 1em 2em;
@@ -329,6 +368,7 @@ footer ul li:hover {
     padding: 2em;
   }
 }
+/* Mobile phone mode */
 @media only screen and (max-width: 600px) {
   nav {
     justify-content: flex-end;

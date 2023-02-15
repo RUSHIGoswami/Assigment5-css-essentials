@@ -1,6 +1,6 @@
 @import "_configs.scss";
 
-// Navbar
+/* Navbar */
 nav {
   background-color: $black;
   width: 100%;
@@ -8,7 +8,7 @@ nav {
   align-items: center;
   padding: 1em 10em;
 
-  // Logo
+  /* Logo */
   .logo {
     color: $white;
     font-size: 1.5em;
@@ -16,9 +16,9 @@ nav {
     cursor: pointer;
   }
 
-  // List of hyper links
+  /* List of hyper links */
   ul {
-    // Using flex so that nav link can be in row.
+    /* Using flex so that nav link can be in row. */
     display: flex;
 
     li {
@@ -29,7 +29,7 @@ nav {
         color: $white;
       }
 
-      // Hover effect using pseudo selector.
+      /* Hover effect using pseudo selector. */
       a:hover {
         background-color: $white;
         transition: all 1s ease-in-out;
@@ -38,7 +38,7 @@ nav {
     }
   }
 
-  // Responsive bars for navbar
+  /* Responsive bars for navbar */
   .bars {
     display: none;
     color: $white;
@@ -51,11 +51,11 @@ nav {
   }
 }
 
-// Hero section
+/* Hero section */
 
 .hero-container {
 
-  // Displaying flex so I can move image.
+  /* Displaying flex so I can move image. */
   .hero-1 {
     display: flex;
     width: 100%;
@@ -64,7 +64,7 @@ nav {
     overflow: auto;
     background-color: $light-gray;
 
-    // Nested image 
+    /* Nested image  */
     img {
       width: 20em;
       height: 20em;
@@ -72,13 +72,13 @@ nav {
       cursor: pointer;
     }
 
-    // Image hover effect.
+    /* Image hover effect. */
     img:hover {
       box-shadow: 3px 3px 10px 2px $dark-gray;
       transition: all 1s ease;
     }
 
-    // Button
+    /* Button */
     button {
       color: $white;
       background-color: $light-blue;
@@ -86,7 +86,7 @@ nav {
       border: 0;
       border-radius: 5px;
 
-      // For double arrows
+      /* For double arrows */
       i {
         visibility: hidden;
         font-size: 1.1em;
@@ -94,12 +94,12 @@ nav {
       }
     }
 
-    // Button hover effect.
+    /* Button hover effect. */
     button:hover {
       background-color: $blue;
       i {
         visibility: visible;
-        // Using translate function for moving effect.
+        /* Using translate function for moving effect. */
         transform: translateX(10%);
         transition: all 0.5s ease;
       }
@@ -107,10 +107,10 @@ nav {
   }
 
 
-  // Second hero section.
+  /* Second hero section. */
   .hero-2 {
-    // Using extend partial of scss for inheriting the first hero section.
-    // Here I have to write only those properties which are changing all other will be applied automatically.
+    /* Using extend partial of scss for inheriting the first hero section.*/
+    /* Here I have to write only those properties which are changing all other will be applied automatically. */ 
     @extend .hero-1;
     background-color: $lightest-green;
     img {
@@ -128,14 +128,14 @@ nav {
 }
 
 
-// Cards section.
+/* Cards section. */
 .cards {
-  // Using flexbox to align them properly.
+  /* Using flexbox to align them properly. */
   display: flex;
   flex-direction: row;
   margin: 3em 10em;
 
-  // Using one class I am giving same styles to all cards.
+  /* Using one class I am giving same styles to all cards. */
   .card {
     display: flex;
     flex-direction: column;
@@ -149,14 +149,14 @@ nav {
     text-align: center;
     cursor: pointer;
 
-    // Using transition for smooth animation.
+    /* Using transition for smooth animation. */
     transition: transform 0.7s ease-in-out;
 
     p {
       margin: 0;
     }
 
-    // Here I have used mixin of scss to give different color different cards.
+    /* Here I have used mixin of scss to give different color different cards. */
     .fa-music {
       @include circularIcon($hot-pink);
     }
@@ -177,9 +177,9 @@ nav {
   }
 
 
-  // Here I have to give hover effect separately to every cards because I am not using JavaScript. 
+  /* Here I have to give hover effect separately to every cards because I am not using JavaScript.  */
 
-  // music card hover effect.
+  /* music card hover effect. */
   .card-music:hover {
     color: $white;
     background-color: $hot-pink;
@@ -192,7 +192,7 @@ nav {
     }
   }
 
-  // Download card hover effect.
+  /* Download card hover effect. */
   .card-download:hover {
     color: $white;
     background-color: $light-green;
@@ -205,7 +205,7 @@ nav {
     }
   }
 
-  // Camera card hover effect.
+  /* Camera card hover effect. */
   .card-camera:hover {
     color: $white;
     background-color: $orange;
@@ -218,7 +218,7 @@ nav {
     }
   }
 
-  // Wifi card hover effect.
+  /* Wifi card hover effect. */
   .card-wifi:hover {
     color: $white;
     background-color: $light-blue;
@@ -231,7 +231,7 @@ nav {
     }
   }
 
-  // Location card hover effect.
+  /* Location card hover effect. */
   .card-location:hover {
     color: $white;
     background-color: $dark-gray;
@@ -246,9 +246,9 @@ nav {
 }
 
 
-// Styles for footer.
+/* Styles for footer. */
 footer {
-  // Using flexbox to align properly in columns.
+  /* Using flexbox to align properly in columns. */
   display: flex;
   color: #ccc;
   align-items: flex-start;
@@ -257,10 +257,13 @@ footer {
   padding: 2em 15em 2em 5em;
   background-color: $dark-gray;
 
+  /* Headings of footer. */
   h4,
   .col-1 {
     color: $white;
   }
+
+  /* Styles for unordered list of footer. */
   ul {
     li {
       font-size: 15px;
@@ -269,7 +272,7 @@ footer {
       cursor: pointer;
     }
 
-    // Footer items hover effect.
+    /* Footer items hover effect. */
     li:hover {
       color: $white;
       transition: all 0.4s ease-in-out;
@@ -277,5 +280,6 @@ footer {
   }
 }
 
-// I kept responsive stylesheet 
+/* I kept responsive stylesheet separately for ease. */
+
 @import "_responsive.scss";

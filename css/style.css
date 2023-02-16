@@ -373,7 +373,7 @@ footer ul li:hover {
     margin: 1em;
   }
   footer {
-    padding: 2em;
+    padding: 2em 8em 2em 2em;
   }
 }
 /* Mobile phone mode */

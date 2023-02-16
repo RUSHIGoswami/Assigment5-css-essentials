@@ -32,7 +32,7 @@ nav {
       /* Hover effect using pseudo selector. */
       a:hover {
         background-color: $white;
-        transition: all 1s ease-in-out;
+        transition: all 0.5s ease-in-out;
         color: $black;
       }
     }
@@ -41,6 +41,7 @@ nav {
   /* Responsive bars for navbar */
   .bars {
     display: none;
+    background: none;
     color: $white;
     font-size: 1.2em;
     width: 1.5em;
@@ -69,6 +70,7 @@ nav {
       width: 20em;
       height: 20em;
       margin-left: 1em;
+      border: 1px solid $black;
       cursor: pointer;
     }
 
@@ -82,7 +84,7 @@ nav {
     button {
       color: $white;
       background-color: $light-blue;
-      padding: 10px 1.5em 10px 13px;
+      padding: 10px 14px;
       border: 0;
       border-radius: 5px;
       cursor: pointer;
@@ -118,6 +120,7 @@ nav {
       float: left;
       margin-left: 0;
       margin-right: 1em;
+      border: 1px solid $black;
     }
     button {
       background-color: $lighter-green;
@@ -134,6 +137,8 @@ nav {
   /* Using flexbox to align them properly. */
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 3em 10em;
 
   /* Using one class I am giving same styles to all cards. */
@@ -255,13 +260,14 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
   align-content: flex-start;
-  padding: 2em 15em 2em 5em;
+  padding: 1em 15em 2em 5em;
   background-color: $dark-gray;
 
   /* Headings of footer. */
   h4,
   .col-1 {
-    color: $white;
+    color: #ddd;
+    margin-top: 1em;
   }
 
   /* Styles for unordered list of footer. */

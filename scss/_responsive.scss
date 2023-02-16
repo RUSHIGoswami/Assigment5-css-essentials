@@ -1,5 +1,5 @@
 /* Tablet Landscape */
-@media only screen and (max-width: 992px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
   nav {
     padding: 1em 4em;
   }
@@ -7,7 +7,7 @@
   .hero-container {
     .hero-1 {
       height: 35em;
-      padding: 2em 4em 2em 1em;
+      padding: 2em;
 
       img {
         height: 30em;
@@ -21,7 +21,7 @@
     margin: 3em 2em 3em 4em;
 
     .card {
-      width: 17em;
+      width: calc(50% - 2em);
       margin: 1em;
     }
   }
@@ -41,7 +41,7 @@
     .hero-1 {
       height: 35em;
       font-size: 13px;
-      padding: 2em 4em 2em 1em;
+      padding: 2em;
       align-items: center;
 
       img {
@@ -57,7 +57,7 @@
     margin: 2em;
 
     .card {
-      width: 18em;
+      width: calc(50% - 2em);
       margin: 1em;
     }
   }
@@ -71,16 +71,25 @@
 /* Mobile phone mode */
 @media only screen and (max-width: 600px) {
   nav {
+    position: relative;
     justify-content: flex-end;
     padding: 1em;
     .logo {
-      display: none;
+      // display: none;
+      margin-right: auto;
     }
     ul {
       display: none;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      margin: 0 3em 0 0;
+      font-size: 10px;
+      transform: translateX(-10%, 10%);
     }
     .bars {
       display: block;
+      position: absolute;
     }
   }
 
@@ -88,7 +97,7 @@
     .hero-1 {
       height: auto;
       font-size: 13px;
-      padding: 2em 4em 2em 1em;
+      padding: 1em;
       align-items: center;
       flex-direction: column-reverse;
 

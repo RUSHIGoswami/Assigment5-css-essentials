@@ -1,5 +1,20 @@
 /* Tablet Landscape */
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+@media only screen and (width: 1180px){
+  .cards {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3em 2em 3em 4em;
+
+    .card {
+      
+      width: calc(50% - 15em);
+      margin: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1080px) {
   nav {
     padding: 1em 4em;
   }
@@ -21,7 +36,8 @@
     margin: 3em 2em 3em 4em;
 
     .card {
-      width: calc(50% - 15em);
+      
+      width: calc(50% - 14em);
       margin: 1em;
     }
   }
@@ -32,7 +48,7 @@
 }
 
 /* Tablet potrait mode */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   nav {
     padding: 1em 2.5em;
   }
